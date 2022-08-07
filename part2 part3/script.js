@@ -195,15 +195,6 @@ const arr = [9,8,5,6,4,3,2,1];
     return sum;
    })(arr);
 
-// Fix the code to gen Title caps.
-// var array = ["guvi", "geek", "zen", "fullstack"];
-// var ano = function(arro) {
-//     for (var i = 0; i <= arro.length; i++) {
-//     console.log(arro[i][0].toUpperCase() + arro[i].substr(1));
-//     }
-//    }
-//    ano(array);
-
 // Fix the code to return the Prime numbers
 const newArray=[1,3,2,5,10];
 const myPrime=newArray.filter(num=>{
@@ -229,8 +220,8 @@ var array = [1, 2, 3, 6, 8, 6, 1, 9, 10, 12, 13];
 var k = 3;
 k = array.length % k;
 (function(arr) {
- arr = {};
- out = arr.slice(k + 1, arr.length);
+//  arr = {};
+ var out = arr.slice(k + 1, arr.length);
  var count = out.length;
  for (var i = 0; i < k + 1; i++) {
  out[count] = arr[i];
@@ -238,3 +229,77 @@ k = array.length % k;
  }
  console.log(out);
 })(array);
+
+// Fix the code to gen Title caps.
+var arrCap = ["guvi", "geek", "zen", "fullstack"];
+(function(arr) {
+    for (var i = 0; i < arr.length; i++) {
+    console.log(arr[i][0].toUpperCase() + arr[i].substr(1));
+    }
+   })(arrCap);
+
+// print all odd numbers in an array using IIFE function
+var arrofOdd = [1, 2, 3, 5, 7, 79, 7, 2, 6, 9, 4];
+(function(arr) {
+    for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+    console.log(arr[i]);
+    }}
+   })(arrofOdd);
+
+// Fix the code to reverse.
+(function(str){
+    revstr = str.split("").reverse().join("");
+    console.log(revstr); 
+   })("abcd");
+
+// Fix the code to remove duplicates.
+var res = function(arr){
+    for(var i=0; i < arr.length; i++){
+    newArr = [];
+    if(newArr.indexOf(arr[i]) == -1) {
+    newArr.push(arr[i]);
+    } }
+    console.log(newArr);
+   }
+   res(["guvi","geek","guvi","duplicate","geeK"]);
+
+
+// Fix the code to give the below output: Sum of odd numbers in an array
+var as=[12,34,5,6,2,56,6,2,1];
+var oddNumbers = as.filter(function(item) {
+    return (item % 2 !== 0);
+ });
+ console.log(oddNumbers);
+var s=oddNumbers.reduce((a,c) => {
+ return a+c;
+},0);
+console.log(s);
+
+// Fix the code to give the below output: Swap the odd and even digits
+var aaa = data => {
+    var a=data;
+   for(var i=0;i<a.length;i++){
+    var l="";
+    var s=a[i+1]
+    var b=a[i]
+    l+=s
+    l+=b
+    i=i+1
+   }
+   if((a.length%2)!=0){
+    l+=a[a.length]
+   }
+   console.log(l);
+   }
+   aaa("1234");
+
+// Fix the code to gen Title caps.
+var array = ["guvi", "geek", "zen", "fullstack"];
+var ano = (arro) => {
+    for (var i = 0; i <= arro.length; i++) {
+    var caps=arro[i][0].toUpperCase() + arro[i].substr(1);
+    console.log(caps);
+    }
+   }
+   ano(array);
